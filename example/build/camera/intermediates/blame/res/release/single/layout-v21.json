@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/camera/intermediates/res/merged/release/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/camera/intermediates/res/merged/release/layout-v21/notification_action.xml",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/camera/intermediates/res/merged/release/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/camera/intermediates/res/merged/release/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/layout-v21/notification_template_custom_big.xml"
+    }
+]

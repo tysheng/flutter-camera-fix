@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/camera/intermediates/res/merged/release/drawable-hdpi-v4/notification_bg_normal_pressed.9.png",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/camera/intermediates/res/merged/release/drawable-hdpi-v4/notification_bg_low_pressed.9.png",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/drawable-hdpi-v4/notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/camera/intermediates/res/merged/release/drawable-hdpi-v4/notification_bg_normal.9.png",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/drawable-hdpi-v4/notification_bg_normal.9.png"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/camera/intermediates/res/merged/release/drawable-hdpi-v4/notify_panel_notification_icon_bg.png",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/camera/intermediates/res/merged/release/drawable-hdpi-v4/notification_bg_low_normal.9.png",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/drawable-hdpi-v4/notification_bg_low_normal.9.png"
+    }
+]

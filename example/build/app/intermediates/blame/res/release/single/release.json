@@ -1,0 +1,130 @@
+[
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/app/intermediates/res/merged/release/drawable_notification_bg_low.xml.flat",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/drawable/notification_bg_low.xml"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/app/intermediates/res/merged/release/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/app/intermediates/res/merged/release/drawable-hdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/drawable-hdpi-v4/notification_bg_normal.9.png"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/app/intermediates/res/merged/release/drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/app/intermediates/res/merged/release/layout-v21_notification_action_tombstone.xml.flat",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/app/intermediates/res/merged/release/drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/drawable-hdpi-v4/notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/app/intermediates/res/merged/release/drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/app/intermediates/res/merged/release/drawable_notification_tile_bg.xml.flat",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/drawable/notification_tile_bg.xml"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/app/intermediates/res/merged/release/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/app/intermediates/res/merged/release/drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/app/intermediates/res/merged/release/layout-v21_notification_template_custom_big.xml.flat",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/app/intermediates/res/merged/release/drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/app/intermediates/res/merged/release/drawable-xhdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/app/intermediates/res/merged/release/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/app/intermediates/res/merged/release/layout-v21_notification_action.xml.flat",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/app/intermediates/res/merged/release/drawable_launch_background.xml.flat",
+        "source": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/android/app/src/main/res/drawable/launch_background.xml"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/app/intermediates/res/merged/release/drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/drawable-mdpi-v4/notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/app/intermediates/res/merged/release/drawable-mdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/drawable-mdpi-v4/notification_bg_normal.9.png"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/app/intermediates/res/merged/release/drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/drawable-xhdpi-v4/notification_bg_normal.9.png"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/app/intermediates/res/merged/release/drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/app/intermediates/res/merged/release/drawable_notification_icon_background.xml.flat",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/drawable/notification_icon_background.xml"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/app/intermediates/res/merged/release/drawable_notification_bg.xml.flat",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/drawable/notification_bg.xml"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/app/intermediates/res/merged/release/drawable-v21_notification_action_background.xml.flat",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/drawable-v21/notification_action_background.xml"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/app/intermediates/res/merged/release/drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/drawable-mdpi-v4/notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/app/intermediates/res/merged/release/drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/app/intermediates/res/merged/release/drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/drawable-xhdpi-v4/notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/app/intermediates/res/merged/release/layout-v21_notification_template_icon_group.xml.flat",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/app/intermediates/res/merged/release/layout_notification_template_part_chronometer.xml.flat",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/app/intermediates/res/merged/release/layout_notification_template_part_time.xml.flat",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/app/intermediates/res/merged/release/drawable-hdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "/Users/seitenyou/.gradle/caches/transforms-1/files-1.1/core-1.0.0.aar/f08a0e220855c433abf7a4f91a567b97/res/drawable-hdpi-v4/notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/app/intermediates/res/merged/release/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/app/intermediates/res/merged/release/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    }
+]
