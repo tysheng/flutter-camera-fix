@@ -288,10 +288,10 @@ class CameraController extends ValueNotifier<CameraValue> {
     } on PlatformException catch (e) {
       throw CameraException(e.code, e.message);
     }
-    _eventSubscription =
-        EventChannel('flutter.io/cameraPlugin/cameraEvents$_textureId')
-            .receiveBroadcastStream()
-            .listen(_listener);
+//    _eventSubscription =
+//        EventChannel('flutter.io/cameraPlugin/cameraEvents$_textureId')
+//            .receiveBroadcastStream()
+//            .listen(_listener);
     _creatingCompleter.complete();
     return _creatingCompleter.future;
   }
@@ -583,7 +583,7 @@ class CameraController extends ValueNotifier<CameraValue> {
         'dispose',
         <String, dynamic>{'textureId': _textureId},
       );
-      await _eventSubscription?.cancel();
+//      await _eventSubscription?.cancel();
     }
   }
 }

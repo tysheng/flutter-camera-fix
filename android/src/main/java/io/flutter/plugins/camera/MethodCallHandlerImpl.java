@@ -18,6 +18,7 @@ import androidx.annotation.Nullable;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -231,6 +232,19 @@ final class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler {
                             fos.write(data);
                             fos.close();
                         } catch (Exception e) {
+                            Log.e(TAG, "onPictureTaken: ", e);
+                        }
+                        File target = new File(path);
+                        if (!target.exists()) {
+                            try {
+                                target.createNewFile();
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                        try {
+                            FileUtil.copy(file, target, true);
+                        } catch (IOException e) {
                             Log.e(TAG, "onPictureTaken: ", e);
                         }
                         Log.d(TAG, "onPictureTaken: " + path);
