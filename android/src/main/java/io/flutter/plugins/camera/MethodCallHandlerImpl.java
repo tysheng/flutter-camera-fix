@@ -140,7 +140,6 @@ final class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler {
                 String path = call.argument("path");
                 if (camera != null) {
                     camera.takePhoto(path, result);
-                    camera.dispose();
                 }
                 break;
             }
@@ -297,7 +296,7 @@ final class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler {
                         Log.d(TAG, "onPictureTaken: " + path);
                         long timeCost = System.currentTimeMillis() - start;
                         Log.d(TAG, "onPictureTaken: " + timeCost);
-                        result.success(path);
+                        result.success(null);
                     }
                 });
             }
