@@ -1,4 +1,0 @@
-#Wed Nov 27 10:15:52 SGT 2019
-base.0=/Users/seitenyou/IdeaProjects/plugins/packages/camera/example/build/app/intermediates/transforms/dexMerger/release/0
-path.0=classes.dex
-renamed.0=classes.dex
