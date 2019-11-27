@@ -74,7 +74,7 @@ final class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler {
                     camera.close();
                 }
                 camera = new QrReader(cameraName, resolutionPreset, result);
-                result.success(null);
+//                result.success(null);
                 break;
             }
             case "takePicture": {
@@ -218,8 +218,8 @@ final class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler {
                 cameraSource.takePhoto(new android.hardware.Camera.PictureCallback() {
                     @Override
                     public void onPictureTaken(byte[] data, android.hardware.Camera camera) {
-                        File filesDir = activity.getFilesDir();
-                        File file = new File(filesDir, "photo.jpg");
+                        long start = System.currentTimeMillis();
+                        File file = new File(path);
                         if (!file.exists()) {
                             try {
                                 file.createNewFile();
@@ -234,20 +234,9 @@ final class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler {
                         } catch (Exception e) {
                             Log.e(TAG, "onPictureTaken: ", e);
                         }
-                        File target = new File(path);
-                        if (!target.exists()) {
-                            try {
-                                target.createNewFile();
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                            }
-                        }
-                        try {
-                            FileUtil.copy(file, target, true);
-                        } catch (IOException e) {
-                            Log.e(TAG, "onPictureTaken: ", e);
-                        }
                         Log.d(TAG, "onPictureTaken: " + path);
+                        long timeCost = System.currentTimeMillis() - start;
+                        Log.d(TAG, "onPictureTaken: " + timeCost);
                         result.success(path);
                     }
                 });
