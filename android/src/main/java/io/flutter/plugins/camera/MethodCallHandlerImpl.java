@@ -140,6 +140,7 @@ final class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler {
                 String path = call.argument("path");
                 if (camera != null) {
                     camera.takePhoto(path, result);
+                    camera.dispose();
                 }
                 break;
             }
