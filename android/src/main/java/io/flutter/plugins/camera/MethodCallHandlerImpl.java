@@ -3,6 +3,7 @@ package io.flutter.plugins.camera;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.Application;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.hardware.camera2.CameraAccessException;
@@ -10,6 +11,7 @@ import android.hardware.camera2.CameraCharacteristics;
 import android.hardware.camera2.CameraManager;
 import android.hardware.camera2.CameraMetadata;
 import android.os.Build;
+import android.os.Bundle;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
@@ -54,6 +56,63 @@ final class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler {
         methodChannel = new MethodChannel(messenger, "plugins.flutter.io/camera");
         methodChannel.setMethodCallHandler(this);
         cameraManager = (CameraManager) activity.getSystemService(Context.CAMERA_SERVICE);
+        activity.getApplication().registerActivityLifecycleCallbacks(new Application.ActivityLifecycleCallbacks() {
+            @Override
+            public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
+
+            }
+
+            @Override
+            public void onActivityStarted(Activity activity) {
+
+            }
+
+            @Override
+            public void onActivityResumed(Activity activity) {
+                if (activity == MethodCallHandlerImpl.this.activity) {
+                    if (camera != null) {
+                        camera.startCameraSource();
+                    }
+                }
+            }
+
+            @Override
+            public void onActivityPaused(Activity activity) {
+                if (activity == MethodCallHandlerImpl.this.activity) {
+                    if (camera != null) {
+                        if (camera.preview != null) {
+                            camera.preview.stop();
+
+                        }
+                    }
+                }
+            }
+
+            @Override
+            public void onActivityStopped(Activity activity) {
+                if (activity == MethodCallHandlerImpl.this.activity) {
+                    if (camera != null) {
+                        if (camera.preview != null) {
+                            camera.preview.stop();
+                        }
+
+                        if (camera.cameraSource != null) {
+                            camera.cameraSource.release();
+                        }
+                    }
+                }
+            }
+
+            @Override
+            public void onActivitySaveInstanceState(Activity activity, Bundle outState) {
+
+            }
+
+            @Override
+            public void onActivityDestroyed(Activity activity) {
+
+            }
+        });
     }
 
     @Override
