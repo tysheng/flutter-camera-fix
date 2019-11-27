@@ -296,7 +296,7 @@ final class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler {
                         Log.d(TAG, "onPictureTaken: " + path);
                         long timeCost = System.currentTimeMillis() - start;
                         Log.d(TAG, "onPictureTaken: " + timeCost);
-                        result.success(null);
+                        result.success(path);
                     }
                 });
             }
