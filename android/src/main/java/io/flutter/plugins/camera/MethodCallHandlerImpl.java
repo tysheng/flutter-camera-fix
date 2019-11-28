@@ -10,6 +10,7 @@ import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraCharacteristics;
 import android.hardware.camera2.CameraManager;
 import android.hardware.camera2.CameraMetadata;
+import android.media.ThumbnailUtils;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -296,6 +297,12 @@ final class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler {
                         Log.d(TAG, "onPictureTaken: " + path);
                         long timeCost = System.currentTimeMillis() - start;
                         Log.d(TAG, "onPictureTaken: " + timeCost);
+                        String compress = FileUtil.compress(activity, file.getAbsolutePath());
+                        try {
+                            FileUtil.copy(new File(compress), file, true);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
                         result.success(path);
                     }
                 });
