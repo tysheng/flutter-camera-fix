@@ -279,16 +279,16 @@ final class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler {
                     @Override
                     public void onPictureTaken(byte[] data, android.hardware.Camera camera) {
                         long start = System.currentTimeMillis();
-                        File file = new File(path);
-                        if (!file.exists()) {
+                        File temp = new File(activity.getCacheDir(), "photo_temp.jpg");
+                        if (!temp.exists()) {
                             try {
-                                file.createNewFile();
+                                temp.createNewFile();
                             } catch (IOException e) {
                                 e.printStackTrace();
                             }
                         }
                         try {
-                            FileOutputStream fos = new FileOutputStream(file);
+                            FileOutputStream fos = new FileOutputStream(temp);
                             fos.write(data);
                             fos.close();
                         } catch (Exception e) {
@@ -297,12 +297,7 @@ final class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler {
                         Log.d(TAG, "onPictureTaken: " + path);
                         long timeCost = System.currentTimeMillis() - start;
                         Log.d(TAG, "onPictureTaken: " + timeCost);
-                        String compress = FileUtil.compress(activity, file.getAbsolutePath());
-                        try {
-                            FileUtil.copy(new File(compress), file, true);
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
+                        FileUtil.compress(activity, temp.getAbsolutePath(), new File(path).getAbsolutePath());
                         result.success(path);
                     }
                 });

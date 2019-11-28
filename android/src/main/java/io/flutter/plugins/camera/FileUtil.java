@@ -59,48 +59,45 @@ public class FileUtil {
     }
 
 
-    public static String compress(Context context, String originalImagePath) {
+    public static String compress(Context context, String originalImagePath, String targetPath) {
         File originalImageFile = new File(originalImagePath);
         if (originalImageFile.exists()) {
-            String tempFilePath = "IMG_" + new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date()) + ".jpg";
-            File storageDir = context.getCacheDir();
-            File compressedFile = new File(storageDir, tempFilePath);
-            if (!compressedFile.exists()) {
-                OutputStream outputStream = null;
-                BitmapFactory.Options options = new BitmapFactory.Options();
-                options.inJustDecodeBounds = true;
-                BitmapFactory.decodeFile(originalImagePath, options);
-                int currentHeight = options.outHeight;
-                int currentWidth = options.outWidth;
+            File compressedFile = new File(targetPath);
 
-                Log.d(TAG, "current " + currentWidth + "," + currentHeight);
-                Bitmap originalImage;
+            OutputStream outputStream = null;
+            BitmapFactory.Options options = new BitmapFactory.Options();
+            options.inJustDecodeBounds = true;
+            BitmapFactory.decodeFile(originalImagePath, options);
+            int currentHeight = options.outHeight;
+            int currentWidth = options.outWidth;
 
-                float maxEdge = Math.max(currentHeight, currentWidth);
+            Log.d(TAG, "current " + currentWidth + "," + currentHeight);
+            Bitmap originalImage;
 
-                if (maxEdge > MAX_IMAGE_WIDTH) {
-                    options.inJustDecodeBounds = false;
-                    options.inSampleSize = 2;
+            float maxEdge = Math.max(currentHeight, currentWidth);
+
+            if (maxEdge > MAX_IMAGE_WIDTH) {
+                options.inJustDecodeBounds = false;
+                options.inSampleSize = 2;
 
 //                    while (maxEdge / options.inSampleSize > MAX_IMAGE_WIDTH) {
 //                        options.inSampleSize *= 2;
 //                    }
 
-                    originalImage = BitmapFactory.decodeFile(originalImagePath, options);
-                } else {
-                    originalImage = BitmapFactory.decodeFile(originalImagePath);
-                }
-                originalImage = addExif(originalImage, originalImagePath);
-                try {
-                    outputStream = context.getContentResolver().openOutputStream(Uri.fromFile(compressedFile));
-                    Log.d(TAG, "new " + originalImage.getWidth() + "," + originalImage.getHeight());
-                    originalImage.compress(Bitmap.CompressFormat.JPEG, 85, outputStream);
-                    originalImage.recycle();
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                } finally {
-                    close(outputStream);
-                }
+                originalImage = BitmapFactory.decodeFile(originalImagePath, options);
+            } else {
+                originalImage = BitmapFactory.decodeFile(originalImagePath);
+            }
+            originalImage = addExif(originalImage, originalImagePath);
+            try {
+                outputStream = context.getContentResolver().openOutputStream(Uri.fromFile(compressedFile));
+                Log.d(TAG, "new " + originalImage.getWidth() + "," + originalImage.getHeight());
+                originalImage.compress(Bitmap.CompressFormat.JPEG, 85, outputStream);
+                originalImage.recycle();
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } finally {
+                close(outputStream);
             }
 
             Log.d(TAG, "final size=" + compressedFile.length());
