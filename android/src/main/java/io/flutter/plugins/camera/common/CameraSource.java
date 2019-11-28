@@ -231,6 +231,7 @@ public class CameraSource {
       } catch (Exception e) {
         Log.e(TAG, "Failed to clear camera preview: " + e);
       }
+      Log.d(TAG, "stop: camera");
       camera.release();
       camera = null;
     }

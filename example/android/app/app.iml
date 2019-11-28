@@ -142,5 +142,9 @@
     <orderEntry type="module" module-name="video_player" />
     <orderEntry type="module" module-name="camera" />
     <orderEntry type="module" module-name="path_provider" />
+    <orderEntry type="module" module-name="e2e" />
+    <orderEntry type="module" module-name="video_player" />
+    <orderEntry type="module" module-name="camera" />
+    <orderEntry type="module" module-name="path_provider" />
   </component>
 </module>

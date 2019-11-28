@@ -73,11 +73,6 @@ public class CameraSourcePreview extends ViewGroup {
         }
     }
 
-    public void start(CameraSource cameraSource, GraphicOverlay overlay) throws IOException {
-        this.overlay = overlay;
-        start(cameraSource);
-    }
-
     public void stop() {
         if (cameraSource != null) {
             cameraSource.stop();
@@ -95,7 +90,6 @@ public class CameraSourcePreview extends ViewGroup {
     private void startIfReady() throws IOException {
         if (startRequested && surfaceAvailable) {
             cameraSource.start(surfaceView);
-//            cameraSource.start();
             if (overlay != null) {
                 Size size = cameraSource.getPreviewSize();
                 int min = Math.min(size.getWidth(), size.getHeight());

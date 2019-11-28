@@ -147,6 +147,7 @@ final class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler {
             case "dispose": {
                 if (camera != null) {
                     camera.dispose();
+                    Log.d(TAG, "onMethodCall: dispose");
                 }
                 result.success(null);
                 break;
