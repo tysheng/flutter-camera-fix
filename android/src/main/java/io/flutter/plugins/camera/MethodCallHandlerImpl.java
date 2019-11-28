@@ -70,38 +70,38 @@ final class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler {
 
             @Override
             public void onActivityResumed(Activity activity) {
-                if (activity == MethodCallHandlerImpl.this.activity) {
-                    if (camera != null) {
-                        camera.startCameraSource();
-                    }
-                }
+//                if (activity == MethodCallHandlerImpl.this.activity) {
+//                    if (camera != null) {
+//                        camera.startCameraSource();
+//                    }
+//                }
             }
 
             @Override
             public void onActivityPaused(Activity activity) {
-                if (activity == MethodCallHandlerImpl.this.activity) {
-                    if (camera != null) {
-                        if (camera.preview != null) {
-                            camera.preview.stop();
-
-                        }
-                    }
-                }
+//                if (activity == MethodCallHandlerImpl.this.activity) {
+//                    if (camera != null) {
+//                        if (camera.preview != null) {
+//                            camera.preview.stop();
+//
+//                        }
+//                    }
+//                }
             }
 
             @Override
             public void onActivityStopped(Activity activity) {
-                if (activity == MethodCallHandlerImpl.this.activity) {
-                    if (camera != null) {
-                        if (camera.preview != null) {
-                            camera.preview.stop();
-                        }
-
-                        if (camera.cameraSource != null) {
-                            camera.cameraSource.release();
-                        }
-                    }
-                }
+//                if (activity == MethodCallHandlerImpl.this.activity) {
+//                    if (camera != null) {
+//                        if (camera.preview != null) {
+//                            camera.preview.stop();
+//                        }
+//
+//                        if (camera.cameraSource != null) {
+//                            camera.cameraSource.release();
+//                        }
+//                    }
+//                }
             }
 
             @Override
