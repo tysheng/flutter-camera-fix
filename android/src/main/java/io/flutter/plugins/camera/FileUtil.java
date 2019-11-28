@@ -32,7 +32,7 @@ import java.util.Locale;
  * Email: tyshengsx@gmail.com
  */
 public class FileUtil {
-    private static final int MAX_IMAGE_WIDTH = 1080;
+    private static final int MAX_IMAGE_WIDTH = 1920;
     private static final String TAG = "FileUtil";
 
     public static void copy(File src, File dst, boolean deleteSrc) throws IOException {
