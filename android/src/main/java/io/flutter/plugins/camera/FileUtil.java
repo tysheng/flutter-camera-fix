@@ -82,9 +82,9 @@ public class FileUtil {
                     options.inJustDecodeBounds = false;
                     options.inSampleSize = 2;
 
-                    while (maxEdge / options.inSampleSize > MAX_IMAGE_WIDTH) {
-                        options.inSampleSize *= 2;
-                    }
+//                    while (maxEdge / options.inSampleSize > MAX_IMAGE_WIDTH) {
+//                        options.inSampleSize *= 2;
+//                    }
 
                     originalImage = BitmapFactory.decodeFile(originalImagePath, options);
                 } else {
