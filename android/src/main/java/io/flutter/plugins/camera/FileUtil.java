@@ -92,7 +92,7 @@ public class FileUtil {
             try {
                 outputStream = context.getContentResolver().openOutputStream(Uri.fromFile(compressedFile));
                 Log.d(TAG, "new " + originalImage.getWidth() + "," + originalImage.getHeight());
-                originalImage.compress(Bitmap.CompressFormat.JPEG, 85, outputStream);
+                originalImage.compress(Bitmap.CompressFormat.JPEG, 95, outputStream);
                 originalImage.recycle();
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
