@@ -3,16 +3,13 @@ package io.flutter.plugins.camera;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.app.Application;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraCharacteristics;
 import android.hardware.camera2.CameraManager;
 import android.hardware.camera2.CameraMetadata;
-import android.media.ThumbnailUtils;
 import android.os.Build;
-import android.os.Bundle;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
@@ -21,12 +18,10 @@ import androidx.annotation.Nullable;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.nio.file.Files;
 import java.util.HashMap;
 import java.util.Map;
 
 import io.flutter.plugin.common.BinaryMessenger;
-import io.flutter.plugin.common.EventChannel;
 import io.flutter.plugin.common.MethodCall;
 import io.flutter.plugin.common.MethodChannel;
 import io.flutter.plugin.common.MethodChannel.Result;
@@ -39,8 +34,7 @@ final class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler {
     private final Activity activity;
     private BinaryMessenger messenger;
     private MethodChannel methodChannel;
-    private @Nullable
-    QrReader camera;
+    private @Nullable InternalCamera camera;
     private static CameraManager cameraManager;
     private TextureRegistry textureRegistry;
     private DartMessenger dartMessenger;
@@ -57,63 +51,6 @@ final class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler {
         methodChannel = new MethodChannel(messenger, "plugins.flutter.io/camera");
         methodChannel.setMethodCallHandler(this);
         cameraManager = (CameraManager) activity.getSystemService(Context.CAMERA_SERVICE);
-        activity.getApplication().registerActivityLifecycleCallbacks(new Application.ActivityLifecycleCallbacks() {
-            @Override
-            public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
-
-            }
-
-            @Override
-            public void onActivityStarted(Activity activity) {
-
-            }
-
-            @Override
-            public void onActivityResumed(Activity activity) {
-//                if (activity == MethodCallHandlerImpl.this.activity) {
-//                    if (camera != null) {
-//                        camera.startCameraSource();
-//                    }
-//                }
-            }
-
-            @Override
-            public void onActivityPaused(Activity activity) {
-//                if (activity == MethodCallHandlerImpl.this.activity) {
-//                    if (camera != null) {
-//                        if (camera.preview != null) {
-//                            camera.preview.stop();
-//
-//                        }
-//                    }
-//                }
-            }
-
-            @Override
-            public void onActivityStopped(Activity activity) {
-//                if (activity == MethodCallHandlerImpl.this.activity) {
-//                    if (camera != null) {
-//                        if (camera.preview != null) {
-//                            camera.preview.stop();
-//                        }
-//
-//                        if (camera.cameraSource != null) {
-//                            camera.cameraSource.release();
-//                        }
-//                    }
-//                }
-            }
-
-            @Override
-            public void onActivitySaveInstanceState(Activity activity, Bundle outState) {
-
-            }
-
-            @Override
-            public void onActivityDestroyed(Activity activity) {
-
-            }
-        });
     }
 
     @Override
@@ -133,7 +70,7 @@ final class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler {
                 if (camera != null) {
                     camera.close();
                 }
-                camera = new QrReader(cameraName, resolutionPreset, result);
+                camera = new InternalCamera(cameraName, resolutionPreset, result);
 //                result.success(null);
                 break;
             }
@@ -179,11 +116,11 @@ final class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler {
     }
 
 
-    private class QrReader {
+    private class InternalCamera {
 
         private CameraSource cameraSource = null;
         private CameraSourcePreview preview;
-        private static final String TAG = "QrReader";
+        private static final String TAG = "InternalCamera";
         private final FlutterView.SurfaceTextureEntry textureEntry;
 
         private boolean isFrontFacing;
@@ -205,7 +142,7 @@ final class MethodCallHandlerImpl implements MethodChannel.MethodCallHandler {
         }
 
         //
-        QrReader(final String cameraName, final String resolutionPreset, @NonNull final Result result) {
+        InternalCamera(final String cameraName, final String resolutionPreset, @NonNull final Result result) {
 
             textureEntry = textureRegistry.createSurfaceTexture();
 
